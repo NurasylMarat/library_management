@@ -42,4 +42,24 @@ public class Library {
     public void showAllBooks() {
         books.forEach(System.out::println);
     }
+
+    public boolean updateYear(String title, int newYear) {
+        for (Book b : books) {
+            if (b.getTitle().equalsIgnoreCase(title)) {
+                b.setYear(newYear);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean deleteByTitle(String title) {
+        for (int i = 0; i < books.size(); i++) {
+            if (books.get(i).getTitle().equalsIgnoreCase(title)) {
+                books.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
 }
