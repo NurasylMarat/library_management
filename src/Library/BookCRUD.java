@@ -36,7 +36,7 @@ public class BookCRUD {
                 int year = rs.getInt("year");
 
                 Book book = new Book(title, author, year);
-                books.add((book));
+                books.add(book);
             }
 
         } catch (SQLException e){
